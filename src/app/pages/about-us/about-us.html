@@ -1,0 +1,117 @@
+<div class="about-container">
+  <!-- Hero Section -->
+  <section class="hero-about">
+    <div class="hero-content">
+      <h1>Conócenos</h1>
+      <p class="hero-subtitle">Somos líderes en tecnología agrícola sostenible</p>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="mission-vision">
+    <div class="container">
+      <div class="mission-vision-grid">
+        <div class="mission-card">
+          <div class="card-icon">🎯</div>
+          <h3>Nuestra Misión</h3>
+          <p>Revolucionar la agricultura mediante tecnología innovadora que optimice la productividad mientras protege el medio ambiente para las futuras generaciones.</p>
+        </div>
+        <div class="vision-card">
+          <div class="card-icon">🌍</div>
+          <h3>Nuestra Visión</h3>
+          <p>Ser la plataforma líder mundial en gestión agrícola inteligente, conectando agricultores con las herramientas tecnológicas más avanzadas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="our-story">
+    <div class="container">
+      <div class="story-content">
+        <div class="story-text">
+          <h2>Nuestra Historia</h2>
+          <p>AGROPE nació en 2018 con una visión clara: democratizar el acceso a tecnología agrícola avanzada. Fundada por un equipo de agrónomos e ingenieros, nuestra plataforma comenzó como una solución local y ha crecido hasta convertirse en una herramienta utilizada por miles de agricultores.</p>
+          <p>Desde nuestros inicios, hemos ayudado a aumentar la productividad de más de 15,000 hectáreas, reducir el uso de recursos en un 30% y aumentar los rendimientos promedio en un 35%.</p>
+          <div class="story-highlights">
+            <div class="highlight">
+              <strong>2018</strong>
+              <span>Fundación de AGROPE</span>
+            </div>
+            <div class="highlight">
+              <strong>2020</strong>
+              <span>Lanzamiento de la plataforma web</span>
+            </div>
+            <div class="highlight">
+              <strong>2023</strong>
+              <span>Expansión internacional</span>
+            </div>
+            <div class="highlight">
+              <strong>2025</strong>
+              <span>+2,500 agricultores activos</span>
+            </div>
+          </div>
+        </div>
+        <div class="story-image">
+          <div class="placeholder-image">🌾 Historia de AGROPE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <h2>Nuestro Equipo</h2>
+      <div class="team-grid">
+        <div class="team-member" *ngFor="let member of teamMembers">
+          <div class="member-photo">{{member.emoji}}</div>
+          <h4>{{member.name}}</h4>
+          <p class="member-role">{{member.role}}</p>
+          <p class="member-description">{{member.description}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values-section">
+    <div class="container">
+      <h2>Nuestros Valores</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🌱</div>
+          <h4>Sostenibilidad</h4>
+          <p>Promovemos prácticas agrícolas que respeten el medio ambiente y aseguren la productividad a largo plazo.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🚀</div>
+          <h4>Innovación</h4>
+          <p>Constantemente desarrollamos nuevas tecnologías para mantener a nuestros usuarios a la vanguardia.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h4>Compromiso</h4>
+          <p>Estamos dedicados al éxito de cada agricultor que confía en nuestra plataforma.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">📈</div>
+          <h4>Excelencia</h4>
+          <p>Buscamos la mejora continua en todos nuestros servicios y productos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-about">
+    <div class="container">
+      <h2>¿Listo para unirte a nosotros?</h2>
+      <p>Forma parte de la revolución agrícola y lleva tu producción al siguiente nivel.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary" (click)="navigateToRegister()">Comenzar Ahora</button>
+        <button class="btn-secondary" (click)="navigateToContact()">Contáctanos</button>
+      </div>
+    </div>
+  </section>
+</div>

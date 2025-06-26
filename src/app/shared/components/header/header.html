@@ -1,0 +1,35 @@
+<header class="header">
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a routerLink="/" class="brand-link">
+        <h2>AGROPE</h2>
+      </a>
+    </div>
+    
+    <div class="nav-menu" [class.active]="isMenuOpen">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/conocenos" routerLinkActive="active" class="nav-link">Conócenos</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/contacto" routerLinkActive="active" class="nav-link">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/login" routerLinkActive="active" class="nav-link login-btn">Iniciar Sesión</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/register" routerLinkActive="active" class="nav-link register-btn">Registrarse</a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="nav-toggle" (click)="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+</header>

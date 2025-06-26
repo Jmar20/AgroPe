@@ -1,0 +1,200 @@
+<div class="contact-container">
+  <!-- Hero Section -->
+  <section class="hero-contact">
+    <div class="hero-content">
+      <h1>Contáctanos</h1>
+      <p class="hero-subtitle">Estamos aquí para ayudarte a llevar tu agricultura al siguiente nivel</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="contact-content">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-section">
+          <h2>Envíanos un mensaje</h2>
+          <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">Nombre *</label>
+                <input 
+                  type="text" 
+                  id="firstName" 
+                  name="firstName"
+                  [(ngModel)]="formData.firstName"
+                  required
+                  class="form-control"
+                  placeholder="Tu nombre"
+                >
+              </div>
+              <div class="form-group">
+                <label for="lastName">Apellido *</label>
+                <input 
+                  type="text" 
+                  id="lastName" 
+                  name="lastName"
+                  [(ngModel)]="formData.lastName"
+                  required
+                  class="form-control"
+                  placeholder="Tu apellido"
+                >
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Correo Electrónico *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email"
+                  [(ngModel)]="formData.email"
+                  required
+                  email
+                  class="form-control"
+                  placeholder="tu@email.com"
+                >
+              </div>
+              <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone"
+                  [(ngModel)]="formData.phone"
+                  class="form-control"
+                  placeholder="+1 (555) 123-4567"
+                >
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Asunto *</label>
+              <select 
+                id="subject" 
+                name="subject"
+                [(ngModel)]="formData.subject"
+                required
+                class="form-control"
+              >
+                <option value="">Selecciona un asunto</option>
+                <option value="consulta-general">Consulta General</option>
+                <option value="soporte-tecnico">Soporte Técnico</option>
+                <option value="ventas">Información de Ventas</option>
+                <option value="demo">Solicitar Demo</option>
+                <option value="partnership">Alianzas Comerciales</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="company">Empresa/Finca</label>
+              <input 
+                type="text" 
+                id="company" 
+                name="company"
+                [(ngModel)]="formData.company"
+                class="form-control"
+                placeholder="Nombre de tu empresa o finca"
+              >
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Mensaje *</label>
+              <textarea 
+                id="message" 
+                name="message"
+                [(ngModel)]="formData.message"
+                required
+                rows="5"
+                class="form-control"
+                placeholder="Cuéntanos cómo podemos ayudarte..."
+              ></textarea>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <label class="checkbox-container">
+                <input 
+                  type="checkbox" 
+                  name="newsletter"
+                  [(ngModel)]="formData.newsletter"
+                >
+                <span class="checkmark"></span>
+                Quiero recibir noticias y actualizaciones de AGROPE
+              </label>
+            </div>
+            
+            <button 
+              type="submit" 
+              class="btn-submit"
+              [disabled]="!contactForm.form.valid || isLoading"
+            >
+              <span *ngIf="!isLoading">Enviar Mensaje</span>
+              <span *ngIf="isLoading">Enviando...</span>
+            </button>
+            
+            <div class="success-message" *ngIf="showSuccess">
+              ✅ ¡Mensaje enviado exitosamente! Te contactaremos pronto.
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-section">
+          <h2>Información de Contacto</h2>
+          
+          <div class="contact-info-grid">
+            <div class="info-card">
+              <div class="info-icon">📧</div>
+              <h4>Email</h4>
+              <p>info&#64;agrope.com</p>
+              <p>soporte&#64;agrope.com</p>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-icon">📱</div>
+              <h4>Teléfono</h4>
+              <p>+1 (555) 123-4567</p>
+              <p>+1 (555) 987-6543</p>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-icon">📍</div>
+              <h4>Oficina Principal</h4>
+              <p>123 Agricultura Street</p>
+              <p>Campo Verde, CV 12345</p>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-icon">⏰</div>
+              <h4>Horarios</h4>
+              <p>Lun - Vie: 8:00 - 18:00</p>
+              <p>Sáb: 9:00 - 14:00</p>
+            </div>
+          </div>
+
+          <!-- FAQ Section -->
+          <div class="faq-section">
+            <h3>Preguntas Frecuentes</h3>
+            <div class="faq-item" *ngFor="let faq of faqs">
+              <h5>{{faq.question}}</h5>
+              <p>{{faq.answer}}</p>
+            </div>
+          </div>
+
+          <!-- Support Links -->
+          <div class="support-links">
+            <h3>Enlaces Útiles</h3>
+            <ul>
+              <li><a href="#" (click)="openSupport()">Centro de Ayuda</a></li>
+              <li><a href="#" (click)="openDocumentation()">Documentación</a></li>
+              <li><a href="#" (click)="openTutorials()">Tutoriales</a></li>
+              <li><a routerLink="/login">Iniciar Sesión</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

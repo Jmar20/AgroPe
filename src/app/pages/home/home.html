@@ -1,0 +1,79 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenido a AGROPE</h1>
+      <p class="hero-subtitle">La plataforma líder en gestión agrícola inteligente</p>
+      <p class="hero-description">Optimiza tu producción agrícola con nuestras herramientas avanzadas de análisis y monitoreo.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" (click)="navigateToRegister()">Comenzar Ahora</button>
+        <button class="btn-secondary" (click)="navigateToAbout()">Conocer Más</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="placeholder-image">🌱 Imagen del Hero</div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2>¿Por qué elegir AGROPE?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Análisis Avanzado</h3>
+          <p>Obtén insights detallados sobre tus cultivos con nuestras herramientas de análisis de datos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌤️</div>
+          <h3>Monitoreo Climático</h3>
+          <p>Recibe alertas climáticas en tiempo real para proteger tus cultivos de condiciones adversas.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Gestión Móvil</h3>
+          <p>Administra tus operaciones agrícolas desde cualquier lugar con nuestra plataforma móvil.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Soporte Experto</h3>
+          <p>Cuenta con el respaldo de nuestro equipo de agrónomos especializados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>{{stats.farmers}}</h3>
+          <p>Agricultores Activos</p>
+        </div>
+        <div class="stat-item">
+          <h3>{{stats.hectares}}</h3>
+          <p>Hectáreas Monitoreadas</p>
+        </div>
+        <div class="stat-item">
+          <h3>{{stats.crops}}</h3>
+          <p>Tipos de Cultivos</p>
+        </div>
+        <div class="stat-item">
+          <h3>{{stats.increase}}</h3>
+          <p>Aumento Promedio en Producción</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>¿Listo para transformar tu agricultura?</h2>
+      <p>Únete a miles de agricultores que ya están optimizando sus cultivos con AGROPE.</p>
+      <button class="btn-primary large" (click)="navigateToRegister()">Crear Cuenta Gratuita</button>
+    </div>
+  </section>
+</div>
